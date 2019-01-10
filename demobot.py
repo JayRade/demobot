@@ -11,7 +11,7 @@ def weather():
         return f'the temperature is {weather}.'
 
 
-@app.route('/greet')
+@app.route('/greet', methods=['GET', 'POST'])
 def greet_person():
     name = request.values.get('text')
     return f'hi {name}!'
